@@ -1,3 +1,5 @@
+# encoding: utf-8
+require 'rake'
 require 'sinatra'
 require 'slim'
 require 'compass'
