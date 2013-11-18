@@ -3,9 +3,9 @@
 
 html, body
   font-family: Tahoma, Geneva, sans-serif
-  font-size: 16px
-  line-height: 24px
-  background: #444c61 url('/bg.png')
+  font-size: 14px
+  line-height: 21px
+  background: #505c72
 
 a, a:visited
   color: #6a87da
@@ -39,16 +39,30 @@ a, a:visited
   padding: 15px
   margin: 0 auto
   background: white
+  position: relative
+  z-index: 1
+  &.content
+    +box-shadow(0 0 10px #31405a)
+    +border-radius(0 0 3px 3px)
 
 header.top_menu
   width: 85%
   min-width: 600px
   margin: 0 auto
   color: white
-  padding: 20px
-  background: #293352
+  padding: 15px 25px
+  background: #3a4d6f
+  +border-radius(0 0 7px 7px)
+  +box-shadow(0 5px 0 0 #31405a)
+  z-index: 4
+  position: relative
 
   ul > li
     display: inline-block
     margin-right: 5px
-    font-size: 14px
+
+footer
+  background: none !important
+  color: #ddd
+  font-size: 12px
+  padding: 10px !important
