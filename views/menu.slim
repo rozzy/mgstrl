@@ -1,4 +1,16 @@
-header.top_menu
+.wrapper: header.top_menu
   ul
     li 
-      ==link '/', 'О компании', 'test', nil
+      == link '/about', 'О компании'
+    li 
+      == link '/objects', 'Объекты'
+    li
+      == link '/docs', 'Документы'
+    li
+      == link '/jobs', 'Вакансии'
+    li
+      == link '/gallery', 'Фотогалерея'
+    li
+      == link '/contacts', 'Контакты'
+    li
+      == link '/faq', 'Вопросы и ответы'
