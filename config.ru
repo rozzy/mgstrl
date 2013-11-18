@@ -18,6 +18,7 @@ configure do
 set :sass, Compass.sass_engine_options
 end
 
+require './functions'
 require './router'
 
 run Sinatra::Application

@@ -5,7 +5,6 @@ get '/*.css' do |file|
   else redirect '/' end
 end
 
-
 get '/*/?' do |page|
   page = page == '' ? 'index' : page
   if File.exists? "#{settings.views}/#{page}.slim"
