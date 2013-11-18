@@ -1,16 +1,18 @@
 header.top_menu.dark
-  ul
+  .logo
+    | СПМК «Магистраль»
+  ul.menu_links
     li 
-      == link '/about', 'О компании'
+      == link '/about', '<span>О компании</span>', 'borderless'
     li 
-      == link '/objects', 'Объекты'
+      == link '/objects', '<span>Объекты</span>', 'borderless'
     li
-      == link '/docs', 'Документы'
+      == link '/docs', '<span>Документы</span>', 'borderless'
     li
-      == link '/jobs', 'Вакансии'
+      == link '/jobs', '<span>Вакансии</span>', 'borderless'
     li
-      == link '/gallery', 'Фотогалерея'
+      == link '/gallery', '<span>Фотогалерея</span>', 'borderless'
     li
-      == link '/contacts', 'Контакты'
+      == link '/contacts', '<span>Контакты</span>', 'borderless'
     li
-      == link '/faq', 'Вопросы и ответы'
+      == link '/faq', '<span>Вопросы и ответы</span>', 'borderless'

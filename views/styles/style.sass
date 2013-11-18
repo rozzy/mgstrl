@@ -1,16 +1,22 @@
 @import compass/css3
 @import compass/reset
 
+$min-width: 800px
+
 html, body
   font-family: Tahoma, Geneva, sans-serif
   font-size: 14px
   line-height: 21px
   background: #505c72
+  min-width: $min-width
 
 a, a:visited
   color: #6a87da
   text-decoration: none
   border-bottom: 1px solid #87a4f7
+
+  &.borderless
+    border: none
   
   &:hover
     color: #3b58ac
@@ -35,7 +41,6 @@ a, a:visited
 
 .wrapper
   width: 85%
-  min-width: 600px
   padding: 15px
   margin: 0 auto
   background: white
@@ -47,19 +52,42 @@ a, a:visited
 
 header.top_menu
   width: 85%
-  min-width: 600px
   margin: 0 auto
   color: white
-  padding: 15px 25px
+  padding: 10px 25px
   background: #3a4d6f
   +border-radius(0 0 7px 7px)
   +box-shadow(0 5px 0 0 #31405a)
   z-index: 4
   position: relative
-
-  ul > li
+  
+  .logo
     display: inline-block
-    margin-right: 5px
+    font-size: 16px
+    margin: 10px 0
+    font-variant: small-caps
+    margin-right: 20px
+    
+  ul.menu_links
+    display: inline-block
+
+  ul.menu_links > li
+    display: inline-block
+    
+    a
+      padding: 5px 8px
+      +border-radius(5px)
+
+      span
+        border-bottom: 1px solid #8c9cc9
+
+    a.active, a.active:hover, a.active:active
+      background: #43587c
+      color: white
+      cursor: default
+
+      span
+        border: none
 
 footer
   background: none !important
