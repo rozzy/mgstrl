@@ -1,4 +1,14 @@
 @import compass/css3
+$retina: '(min--moz-device-pixel-ratio: 1.5), 
+                    (-o-min-device-pixel-ratio: 3/2), 
+                    (-webkit-min-device-pixel-ratio: 1.5), 
+                    (min-device-pixel-ratio: 1.5), 
+                    (min-resolution: 144dpi), 
+                    (min-resolution: 1.5dppx)'
+
+=respond-to($media)
+    @media only screen and #{$media}
+        @content
 
 $header: 'Trebuchet MS', Arial, sans-serif
 
@@ -65,6 +75,8 @@ $header: 'Trebuchet MS', Arial, sans-serif
             padding: 5px 15px
             +border-radius(50px)
             opacity: 0.0
+            +respond-to($retina)
+              opacity: 1
           &:hover
             span
               opacity: 1.0
