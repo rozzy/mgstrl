@@ -20,6 +20,9 @@ a, a:visited
   color: #3b58ac
   text-decoration: none
   border-bottom: 1px solid #ccd8fa
+
+  &.borderless
+    border: none
   
   &[href^="#"]
     border-bottom-style: dashed
@@ -55,7 +58,7 @@ a, a:visited
   position: relative
   z-index: 1
   &.page_title
-    border-top: 3px solid #828dab
+    border-top: 5px solid #828dab
     background: #F2F2F2
     border-bottom: 1px solid #DEDEDE
     text-align: center 
@@ -68,7 +71,7 @@ a, a:visited
       padding-bottom: 50px
   &.simple_c
     background: #fafafa
-    border-top: 3px solid #828dab
+    border-top: 5px solid #828dab
     +border-radius(0 0 5px 5px)
     text-align: center
     h1
@@ -275,6 +278,36 @@ ul.mobile_links
       display: block
       margin-bottom: 3px
       font-size: 12px
+    img.gmap
+      max-width: 100%
+    .map
+      position: relative
+      display: inline-block
+      .togglemap
+        display: none
+      &.hood
+        overflow: hidden
+        height: 100px
+        .togglemap
+          display: block
+          position: absolute
+          text-align: center
+          border: none
+          bottom: 0
+          background: url('map_shadow.png') repeat-x bottom center
+          left: 0
+          color: white
+          width: 600px
+          height: 55px
+          padding-top: 35px
+          span
+            background: #323848
+            padding: 5px 15px
+            +border-radius(50px)
+            opacity: 0.0
+          &:hover
+            span
+              opacity: 1.0
 
 .what_we_do
   margin-top: 15px
