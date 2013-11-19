@@ -65,13 +65,25 @@ a, a:visited
     +border-radius(0 0 5px 5px)
   
 header.top_menu
-  width: 85%
+  width: 87.5%
+  @media only screen and (max-width: 1185px)
+    width: 88.5%
   margin: 0 auto
   z-index: 4
   background: #323848
   position: relative
   color: #ccd8fa
-  
+  .left_shadow, .right_shadow
+    position: absolute
+    bottom: -16px
+    width: 17px
+    height: 16px
+  .left_shadow
+    left: 0
+    background: url('left_top_shadow.png') no-repeat
+  .right_shadow
+    right: 0
+    background: url('right_top_shadow.png') no-repeat
   .logo
     display: inline-block
     font-size: 16px
