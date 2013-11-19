@@ -6,4 +6,5 @@ function setupHeader () {
 $(function () {
   $(window).bind('resize ready', setupHeader);
   setupHeader();
+  $('.bxslider').bxSlider({adaptiveHeight: true, prevText: '←', nextText: '→'});
 });
