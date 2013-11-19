@@ -2,6 +2,7 @@
 @import compass/reset
 
 $min-width: 800px
+$header: 'Trebuchet MS', Arial, sans-serif
 
 html, body
   font-family: Tahoma, Geneva, sans-serif
@@ -10,6 +11,10 @@ html, body
   background: #505c72
   min-width: $min-width
   color: #252525
+
+strong,b
+  font-family: $header
+  font-weight: bold
 
 a, a:visited
   color: #3b58ac
@@ -110,7 +115,7 @@ header.top_menu
 
 h1
   font-size: 36px
-  font-family: 'Trebuchet MS', Arial, sans-serif
+  font-family: $header
   font-weight: bold
   margin-bottom: 10px
   margin-top: 25px
@@ -121,7 +126,7 @@ h2
   font-size: 24px
   color: #394f5d
   margin-top: 15px
-  font-family: 'Trebuchet MS', Arial, sans-serif
+  font-family: $header
   font-weight: bold
 
 .small_descr
@@ -147,10 +152,15 @@ h2
   vertical-align: top
   padding-left: 25px
   min-width: 300px
-  @media only screen and (max-width: 856px)
-    padding: 0
   width: 40%
-  max-width: 400px
+  max-width: 50%
+  border-left: 1px dotted #eaeaea
+  @media only screen and (max-width: 856px)
+    width: 100%
+    max-width: 100%
+    padding: 0
+    margin-top: 35px
+    border: none
 
 .timeline
   margin-top: 15px
@@ -177,7 +187,36 @@ h2
       margin-left: 55px
 .what_we_do
   margin-top: 15px
+  
+  .offer_title
+    display: block
+    margin-top: 25px
+    font-family: $header
+    font-weight: bold
+    font-size: 18px
+  ul.offer
+    list-style: circle
+    margin-left: 40px
+    li
+      margin-top: 8px
+table
+  margin: 10px 0
+  color: #545454
+  font-size: 12px
+  thead
+    font-family: $header
+    border-color: #bdc5ca
+    border-bottom: 3px solid #bdc5ca
+    td
+      border-color: #525a6f
+      font-weight: bold
+      background: #525a6f
+      color: white
 
+  td
+    padding: 5px
+    width: auto
+    border: 1px solid #e1e1e1
 footer
   background: none !important
   color: #ddd
