@@ -60,19 +60,34 @@ header.top_menu
   background: #323848
   position: relative
   color: #ccd8fa
+  position: relative
   
   .logo
     display: inline-block
     font-size: 16px
     margin: 10px 0
     font-variant: small-caps
-    margin-right: 20px
+    margin-right: 40px
+
+  .contacts
+    position: absolute
+    right: 20px
+    top: 10px
+    .phone
+      font-size: 19px
+      text-align: right
+    .address
+      text-align: center
+      font-size: 10px
+      line-height: 14px
+
 
   ul.menu_links
+    position: relative
     display: inline-block
 
-  ul.menu_links > li
-    display: inline-block
+    > li
+      display: inline-block
     
     a
       padding: 5px 8px
@@ -115,6 +130,7 @@ h1
     position: relative
 
     .year
+      margin-top: 15px
       position: absolute
       top: 0
       left: -15px
@@ -123,6 +139,7 @@ h1
       color: White
       padding: 5px 10px
     .descr
+      padding-top: 15px
       margin-left: 55px
 
 footer
