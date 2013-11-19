@@ -8,7 +8,7 @@ end
 get '/*/?' do |page|
   page = page == '' ? 'index' : page
   if File.exists? "#{settings.views}/#{page}.slim"
-  slim page.to_sym 
+    slim page.to_sym
   else raise not_found end
 end
 
