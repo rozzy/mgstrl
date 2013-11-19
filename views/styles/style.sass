@@ -85,6 +85,10 @@ header.top_menu
   ul.menu_links
     position: relative
     display: inline-block
+    @media only screen and (max-width: 1185px)
+      display: block
+      margin-top: 15px
+      margin-left: -5px
 
     > li
       display: inline-block
@@ -130,13 +134,23 @@ h2
 
 .leftside
   display: inline-block
-  width: 600px
+  min-width: 400px
+  width: 50%
+  max-width: 600px
+  @media only screen and (max-width: 856px)
+    width: 100%
+    max-width: 100%
   vertical-align: top
 
 .rightside
   display: inline-block
   vertical-align: top
-  width: 400px
+  padding-left: 25px
+  min-width: 300px
+  @media only screen and (max-width: 856px)
+    padding: 0
+  width: 40%
+  max-width: 400px
 
 .timeline
   margin-top: 15px
