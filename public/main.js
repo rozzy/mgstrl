@@ -10,7 +10,7 @@ $(function () {
   $('.togglemap').click(function () {
     $('.map.opened').animate({height: 100}, function () {$(this).attr('class', 'map hood closed')});
     $('.map.opened .togglemap').fadeIn();
-    $(this).parent().animate({height: 300}, function () {$(this).attr('class', 'map hood opened')});
+    $(this).parent().animate({height: $(this).next().find('img').data('h') ? $(this).next().find('img').data('h') : 300}, function () {$(this).attr('class', 'map hood opened')});
     $(this).fadeOut();
     return false;
   });
