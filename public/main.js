@@ -1,5 +1,6 @@
 function setupHeader () {
-  $('header.top_menu').width($('.content').width() + 34);
+  var selector = $('.content').size() > 0 ? $('.content') : $('.wrapper:last');
+  $('header.top_menu').width(selector.width() + 34);
 }
 
 $(function () {
