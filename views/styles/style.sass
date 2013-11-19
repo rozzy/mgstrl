@@ -55,7 +55,7 @@ a, a:visited
   position: relative
   z-index: 1
   &.page_title
-    border-top: 3px solid #5c95b9
+    border-top: 3px solid #828dab
     background: #dee9ff
     background: #F2F2F2
     border-bottom: 1px solid #DEDEDE
@@ -65,6 +65,8 @@ a, a:visited
       padding: 0
   &.content
     +border-radius(0 0 5px 5px)
+    &.pgb
+      padding-bottom: 50px
   
 header.top_menu
   width: 87.5%
@@ -147,6 +149,14 @@ h2
   margin-top: 15px
   font-family: $header
   font-weight: bold
+  &.l
+    margin-left: -25px
+    padding-left: 25px
+    background: url('dot.png') no-repeat left center
+
+p 
+  line-height: 24px
+  margin-bottom: 10px
 
 .small_descr
   font-size: 12px
@@ -232,15 +242,16 @@ ul.mobile_links
   
   .offer_title
     display: block
+    color: #394f5d
     margin-top: 25px
     font-family: $header
     font-weight: bold
     font-size: 18px
-  ul.offer
-    list-style: circle
-    margin-left: 40px
-    li
-      margin-top: 8px
+ul.offer
+  list-style: circle
+  margin-left: 40px
+  li
+    margin-top: 8px
 table
   margin: 10px 0
   color: #545454
