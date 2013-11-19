@@ -11,15 +11,15 @@ html, body
   min-width: $min-width
 
 a, a:visited
-  color: #6a87da
+  color: #3b58ac
   text-decoration: none
-  border-bottom: 1px solid #87a4f7
+  border-bottom: 1px solid #ccd8fa
 
   &.borderless
     border: none
   
   &:hover
-    color: #3b58ac
+    color: #6a87da
     border-color: #6183e2
 
   &:active
@@ -53,13 +53,11 @@ a, a:visited
 header.top_menu
   width: 85%
   margin: 0 auto
-  color: white
-  padding: 10px 25px
-  background: #3a4d6f
-  +border-radius(0 0 7px 7px)
-  +box-shadow(0 5px 0 0 #31405a)
+  border-bottom: 3px solid #ddd
   z-index: 4
+  background: #323848
   position: relative
+  color: #ccd8fa
   
   .logo
     display: inline-block
@@ -67,7 +65,7 @@ header.top_menu
     margin: 10px 0
     font-variant: small-caps
     margin-right: 20px
-    
+
   ul.menu_links
     display: inline-block
 
@@ -79,10 +77,10 @@ header.top_menu
       +border-radius(5px)
 
       span
-        border-bottom: 1px solid #8c9cc9
+        border-bottom: 1px solid #525a6f
 
     a.active, a.active:hover, a.active:active
-      background: #43587c
+      background: #525a6f
       color: white
       cursor: default
 
