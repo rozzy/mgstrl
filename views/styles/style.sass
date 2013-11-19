@@ -304,7 +304,7 @@ table
     border: none
     display: inline-block
     text-align: center
-    width: 149px
+    width: 168px
     font-size: 12px
     margin-right: 80px
     color: #416488
@@ -313,11 +313,17 @@ table
     .doc_img
       display: block
       background: url('doc.png') no-repeat
-      width: 149px
-      height: 198px
+      width: 168px
+      height: 217px
       margin-bottom: 10px
     span
       border-bottom: 1px solid #b5c7d9
+    &:hover
+      color: #3685d6
+      span
+        border-color: #c7e1fa
+      .doc_img
+        background: url('doc_hover.png') no-repeat
 footer
   background: none !important
   color: #ddd
