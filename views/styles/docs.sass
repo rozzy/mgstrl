@@ -1,0 +1,32 @@
+@import compass/css3
+    
+.docs
+  margin-top: 20px
+  text-align: center
+  a.doc
+    text-decoration: none
+    border: none
+    display: inline-block
+    text-align: center
+    width: 168px
+    font-size: 12px
+    margin-right: 80px
+    outline: none
+    color: #416488
+    &.last
+      margin-right: 0
+    .doc_img
+      display: block
+      background: url('doc.png') no-repeat
+      width: 168px
+      height: 217px
+      margin-bottom: 10px
+    span
+      border-bottom: 1px solid #b5c7d9
+    &:hover, &:focus
+      color: #3685d6
+      +box-shadow(none)
+      span
+        border-color: #c7e1fa
+      .doc_img
+        background: url('doc_hover.png') no-repeat

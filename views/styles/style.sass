@@ -12,7 +12,7 @@ html, body
   min-width: $min-width
   color: #252525
 
-strong,b
+strong, b
   font-family: $header
   font-weight: bold
 
@@ -178,11 +178,13 @@ h2
   margin-top: 15px
   font-family: $header
   font-weight: bold
+
   &.l
     margin-left: -24px
     padding-left: 24px
     background: url('dot.png') no-repeat left center
   &.r
+
     @media only screen and (max-width: 856px)
       margin-left: -24px
       padding-left: 24px
@@ -240,6 +242,7 @@ ul.mobile_links
         margin: 0 7px
         margin-bottom: 12px
         font-size: 36px
+
 .breadcrumbs
   text-align: left
   font-size: 12px 
@@ -248,137 +251,13 @@ ul.mobile_links
     margin: 0 5px
   .actual
     font-weight: bold
-.timeline
-  margin-top: 15px
-  border-left: 10px solid #bdc5ca
-  margin-right: 25px
-  padding-bottom: 10px
-  margin-bottom: -15px
-  
-  .event
-    margin-bottom: 35px
-    position: relative
 
-    .year
-      margin-top: 15px
-      position: absolute
-      top: 0
-      left: -15px
-      background: #96a8b3
-      border: 1px solid white
-      color: White
-      padding: 5px 10px
-    .descr
-      padding-top: 15px
-      margin-left: 55px
-  &.objc
-    .descr
-      margin-left: 125px
-    h3
-      font-size: 18px
-      line-height: 34px
-      font-weight: bold
-      font-family: $header
-      color: #364c62
-    span.info
-      display: block
-      margin-bottom: 3px
-      font-size: 12px
-    img.gmap
-      max-width: 100%
-    .map
-      position: relative
-      display: inline-block
-      .togglemap
-        display: none
-      &.hood
-        overflow: hidden
-        height: 100px
-        .togglemap
-          display: block
-          position: absolute
-          text-align: center
-          border: none
-          bottom: 0
-          background: url('map_shadow.png') repeat-x bottom center
-          left: 0
-          color: white
-          width: 600px
-          height: 55px
-          padding-top: 35px
-          span
-            background: #323848
-            padding: 5px 15px
-            +border-radius(50px)
-            opacity: 0.0
-          &:hover
-            span
-              opacity: 1.0
-
-.what_we_do
-  margin-top: 15px
-  
-  .offer_title
-    display: block
-    color: #394f5d
-    margin-top: 25px
-    font-family: $header
-    font-weight: bold
-    font-size: 18px
 ul.offer
   list-style: circle
   margin-left: 40px
   li
     margin-top: 8px
-table
-  margin: 10px 0
-  color: #545454
-  font-size: 12px
-  margin-bottom: 20px
-  thead
-    font-family: $header
-    border-color: #bdc5ca
-    border-bottom: 3px solid #bdc5ca
-    td
-      border-color: #525a6f
-      font-weight: bold
-      background: #525a6f
-      color: white
 
-  td
-    padding: 5px 7px
-    width: auto
-    border: 1px solid #e1e1e1
-.docs
-  margin-top: 20px
-  text-align: center
-  a.doc
-    text-decoration: none
-    border: none
-    display: inline-block
-    text-align: center
-    width: 168px
-    font-size: 12px
-    margin-right: 80px
-    outline: none
-    color: #416488
-    &.last
-      margin-right: 0
-    .doc_img
-      display: block
-      background: url('doc.png') no-repeat
-      width: 168px
-      height: 217px
-      margin-bottom: 10px
-    span
-      border-bottom: 1px solid #b5c7d9
-    &:hover, &:focus
-      color: #3685d6
-      +box-shadow(none)
-      span
-        border-color: #c7e1fa
-      .doc_img
-        background: url('doc_hover.png') no-repeat
 footer
   background: none !important
   color: #ddd
