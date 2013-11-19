@@ -37,6 +37,10 @@ a, a:visited
     color: #9ab1f2
     border-color: #c1d1ff
 
+  &:focus
+    outline: none
+    +box-shadow(0px 0px 5px 2px #58a1ff)
+
 .dark
   a, a:visited
     color: #dee2ee
@@ -159,6 +163,7 @@ header.top_menu
 
 h1
   font-size: 36px
+  line-height: 48px
   font-family: $header
   font-weight: bold
   margin-bottom: 10px
@@ -168,6 +173,7 @@ h1
 h2
   padding: 10px 0
   font-size: 24px
+  line-height: 32px
   color: #394f5d
   margin-top: 15px
   font-family: $header
@@ -354,6 +360,7 @@ table
     width: 168px
     font-size: 12px
     margin-right: 80px
+    outline: none
     color: #416488
     &.last
       margin-right: 0
@@ -365,8 +372,9 @@ table
       margin-bottom: 10px
     span
       border-bottom: 1px solid #b5c7d9
-    &:hover
+    &:hover, &:focus
       color: #3685d6
+      +box-shadow(none)
       span
         border-color: #c7e1fa
       .doc_img
