@@ -1,0 +1,28 @@
+@import compass/css3
+
+.map
+  position: relative
+  display: inline-block
+  img
+    max-width: 100%
+  .togglemap
+    display: none
+  &.hood
+    overflow: hidden
+    height: 100px
+    .togglemap
+      display: block
+      position: absolute
+      text-align: center
+      border: none
+      bottom: 0
+      background: url('map_shadow.png') repeat-x bottom center
+      left: 0
+      color: white
+      width: 600px
+      height: 55px
+      padding-top: 35px
+      span
+        background: #323848
+        padding: 5px 15px
+        +border-radius(50px)
