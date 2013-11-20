@@ -7,7 +7,7 @@ require 'compass'
 require 'sass'
 
 configure do
-  set :environment, :development
+  set :environment, :production
 
   set :root, File.dirname(__FILE__)
   set :views, 'views'

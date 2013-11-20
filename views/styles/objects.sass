@@ -50,6 +50,12 @@ $header: 'Trebuchet MS', Arial, sans-serif
       display: inline-block
       .togglemap
         display: none
+        
+      border: 1px solid transparent
+      &.opened
+        &:hover
+          border-color: #505c72
+          
       &.hood
         overflow: hidden
         height: 100px
