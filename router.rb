@@ -15,10 +15,10 @@ end
 post '/faq/?' do 
   begin
     params.each { |key, value| raise "Заполните все поля" if (params[key] = CGI::escapeHTML value) == "" }
-    Mail.new(to: 'mgstrl@gmail.com', from: 'mgstrl@gmail.com', subject: params[:title], body: "Имя: #{params[:author]}\nКонтактные данные: #{params[:contact]}\n\nТема: #{params[:title]}\n\n#{params[:question]}").deliver!
+    Mail.new(to: settings.mailto, from: settings.mailto, subject: params[:title], body: "Имя: #{params[:author]}\nКонтактные данные: #{params[:contact]}\n\nТема: #{params[:title]}\n\n#{params[:question]}").deliver!
     $success = "Письмо успешно отправлено"
   rescue => e
-    $error = e.trace
+    $error = e
   end
   slim :faq
 end

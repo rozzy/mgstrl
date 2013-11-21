@@ -15,14 +15,15 @@ configure do
   set :public_folder, 'public'
   set :styles, 'styles'
   set :scripts, 'scripts'
-
+  
+  set :mailto, 'mgstrl@mail.ru' # Письмо, куда будут отправляться письма с вопросами
   Mail.defaults do
       delivery_method :smtp,
-                   {  :address              => 'smtp.mail.ru',
-                      :port                 => 465,
-                      :domain               => 'mgstrl.herokuapp.com',
-                      :user_name            => 'mgstrl@mail.ru',
-                      :password             => 'pazzword',
+                   {  :address              => 'smtp.mail.ru', # сервер мэйл.ру, у gmail: smtp: smtp.gmail.com
+                      :port                 => 465, # порт мэйл.ру, у gmail: 587
+                      :domain               => 'mgstrl.herokuapp.com', # домен, на котором будет работать сайт
+                      :user_name            => 'mgstrl@mail.ru', # адрес мэйл.ру почты
+                      :password             => 'pazzword', # пароль почты
                       :authentication       => 'plain',
                       :enable_starttls_auto => true  
                     }
