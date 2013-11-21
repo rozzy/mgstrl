@@ -12,6 +12,18 @@ get '/*/?' do |page|
   else raise not_found end
 end
 
+post '/faq/?' do 
+  begin
+    params.each do |key, value| 
+      value = CGI::escapeHTML value
+      raise "Заполните все поля" if value == ""
+    end
+  rescue => e
+    $error = e
+  end
+  slim :faq
+end
+
 not_found do
   slim :not_found
 end

@@ -65,6 +65,8 @@
   .rightside
     form.ask#ask action="" method="POST"
       h2.r Задайте нам свой вопрос
+      - if $error
+        .error_h #{$error}
       input type="text" name="author" placeholder="Ваше имя"
       br
       input type="text" name="contact" placeholder="Контактные данные"
