@@ -14,12 +14,11 @@ end
 
 post '/faq/?' do 
   begin
-    params.each do |key, value| 
-      value = CGI::escapeHTML value
-      raise "Заполните все поля" if value == ""
-    end
+    params.each { |key, value| raise "Заполните все поля" if (params[key] = CGI::escapeHTML value) == "" }
+    Mail.new(to: 'mgstrl@gmail.com', from: 'mgstrl@gmail.com', subject: params[:title], body: "Имя: #{params[:author]}\nКонтактные данные: #{params[:contact]}\n\nТема: #{params[:title]}\n\n#{params[:question]}").deliver!
+    $success = "Письмо успешно отправлено"
   rescue => e
-    $error = e
+    $error = e.trace
   end
   slim :faq
 end
