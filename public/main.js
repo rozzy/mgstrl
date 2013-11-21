@@ -7,10 +7,6 @@ $(function () {
   $(window).bind('resize ready', setupHeader);
   setupHeader();
   $('.map.closed').attr('class', 'map hood closed');
-  $('a.question').click(function () {
-    $('ul.faq .answer').stop().slideUp();
-    $(this).next().stop().slideDown();
-  });
   $('.togglemap').click(function () {
     $('.map.opened').animate({height: 100}, function () {$(this).attr('class', 'map hood closed')});
     $('.map.opened .togglemap').fadeIn();
@@ -18,5 +14,4 @@ $(function () {
     $(this).fadeOut();
     return false;
   });
-  if ($('.bxslider').size() > 0) $('.bxslider').bxSlider({adaptiveHeight: true, prevText: '←', nextText: '→'});
 });

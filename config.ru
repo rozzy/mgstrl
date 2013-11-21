@@ -17,6 +17,7 @@ configure do
 
   Slim::Engine.set_default_options pretty: (settings.environment == :development ? true : false), sort_attrs: true
   set :sass, Compass.sass_engine_options
+  set :sass, :style => (settings.environment == :development ? :compact : :compressed)
 end
 
 require './functions'

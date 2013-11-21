@@ -2,23 +2,73 @@
 
 $mxw: 919px
 
+.rightside
+  position: relative
+
+input, textarea
+  width: 330px
+  padding: 5px 8px
+  margin-bottom: 5px
+  border: 1px solid #CECECE
+  +border-radius(1px)
+
+  &:hover
+    border-color: #929292
+
+input[type="submit"]
+  width: 348px
+  padding: 10px
+  color: white
+  background: #45556A
+  cursor: pointer
+  border: 1px solid #2A3D55
+  +text-shadow(0 1px 1px black)
+  +box-shadow(inset 0 1px 1px #5E789B, inset 0 -1px 1px #3E5068, 0 2px 2px #858A8F)
+  
+  &:hover
+    +box-shadow(inset 0 1px 1px #5E789B, inset 0 -1px 1px #3E5068, 0 5px 5px #858A8F)
+  
+  &:active
+    +box-shadow(inset 0 -1px 1px #5E789B, inset 0 1px 1px #3E5068, inset 0 2px 2px #212121)
+  
+  &[disabled], &[disabled]:hover, &[disabled]:active
+    background: #F5F5F5
+    border-color: white
+    color: #818181
+    cursor: default
+    +text-shadow(none)
+    +box-shadow(none)
+  
+textarea
+  resize: none
+  height: 150px
+
 .leftside
   border-right: 1px dotted #eaeaea
   @media only screen and (max-width: $mxw)
     border: none
+
 ul.faq
   list-style: decimal
+  margin-top: 10px
   margin-left: 25px
+
   li
     margin-bottom: 30px
+
     a.question
       font-size: 18px
+
     .answer
       display: none
-      margin-top: 5px
-      padding-right: 10px
+      border-left: 5px solid #f2f2f2
+      padding: 0 10px
+      margin-top: 10px
+      margin-left: -15px
+
 .ask
-  position: fixed
-  @media only screen and (max-width: $mxw)
-    position: relative
-    display: block
+  .caption
+    font-size: 11px
+    margin-bottom: 15px
+    font-variant: italic
+    color: #777

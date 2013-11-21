@@ -4,7 +4,7 @@
     li: a href="#faq" Часто задаваемые вопросы
     li.sep .
     li: a href="#ask" Задайте нам свой вопрос
-.wrapper.content
+.wrapper.content.pgb
   .breadcrumbs
     a href="/" Главная
     span.sep »
@@ -63,6 +63,31 @@
           br
           | Не существует, то возникают противоречия в этом совместной жизни раз было сказано. Перевоспитать второго, навязать ему свои взгляды на том, чтобы ваш. Привыкают друг к периоды припадает большинство разводов другу. Второго, навязать ему никто не существует которых супруги.
   .rightside
-    form.ask#ask
+    form.ask#ask action="" method="POST"
       h2.r Задайте нам свой вопрос
-      input type="text" value="fssss"
+      input type="text" name="author" placeholder="Ваше имя"
+      br
+      input type="text" name="contact" placeholder="Контактные данные"
+      .caption — телефон, адрес электронной почты или скайп
+      input type="text" name="title" placeholder="Заголовок вопроса"
+      br
+      textarea name="question" placeholder="Вопрос, который вы бы хотели задать"
+      br
+      input type="submit" value="Отправить"
+
+  javascript:
+    function check_values () {
+      if ($('input[name="author"]').val() != '' && $('input[name="contact"]').val() != '' && $('input[name="title"]').val() != '' && $('textarea[name="question"]').val() != '') $('input[type="submit"]').val('Отправить').removeAttr('disabled');
+      else $('input[type="submit"]').val('заполните все поля, чтобы отправить вопрос').attr('disabled', 'disabled');
+    }
+
+    check_values();
+    
+    $('input, textarea').bind('change keyup focus blur', check_values);
+    
+    $('a.question').click(function () {
+      $('html,body').stop().animate({scrollTop: $(this).position().top});
+      $('ul.faq .answer').stop().slideUp();
+      $(this).next().stop().slideDown();
+      return false;
+    });
