@@ -8,7 +8,7 @@ require 'sass'
 require 'mail'
 
 configure do
-  set :environment, :production
+  set :environment, :production # или :development
 
   set :root, File.dirname(__FILE__)
   set :views, 'views'
@@ -19,7 +19,7 @@ configure do
   set :mailto, 'mgstrl@mail.ru' # Письмо, куда будут отправляться письма с вопросами
   Mail.defaults do
       delivery_method :smtp,
-                   {  :address              => 'smtp.mail.ru', # сервер мэйл.ру, у gmail: smtp: smtp.gmail.com
+                   {  :address              => 'smtp.mail.ru', # сервер мэйл.ру, у gmail: smtp.gmail.com
                       :port                 => 465, # порт мэйл.ру, у gmail: 587
                       :domain               => 'mgstrl.herokuapp.com', # домен, на котором будет работать сайт
                       :user_name            => 'mgstrl@mail.ru', # адрес мэйл.ру почты
