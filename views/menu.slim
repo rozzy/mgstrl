@@ -1,8 +1,10 @@
 header.wrapper.top_menu.dark
   .left_shadow
   .right_shadow
-  .logo
-    | СПМК «Магистраль»
+  - if request.env['REQUEST_PATH'] == '/'
+    .logo: span &nbsp;
+  - else
+    a.logo href="/": span &nbsp;
   ul.menu_links
     li 
       == link '/about', '<span>О компании</span>', 'borderless'
@@ -20,4 +22,4 @@ header.wrapper.top_menu.dark
       == link '/faq', '<span>Вопросы и ответы</span>', 'borderless'
   .contacts
     .phone 8 (495) 500 14 14
-    .address Московская область, г. Люберцы<br/> ул. Инициативная, д. 8
+    .address Московская область, г. Люберцы<i>,</i><span>ул. Инициативная, д. 8</span>

@@ -4,6 +4,7 @@ function setupHeader () {
 }
 
 $(function () {
+  if ($('.mpgtitle').size() > 0) $('title').text($('title').text() + ' | ' + $('.mpgtitle').text());
   $(window).bind('resize ready', setupHeader);
   setupHeader();
   $('.map.closed').attr('class', 'map hood closed');

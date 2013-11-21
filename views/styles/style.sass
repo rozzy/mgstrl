@@ -125,28 +125,71 @@ header.top_menu
     margin: 10px 0
     font-variant: small-caps
     margin-right: 40px
+    width: 86px !important
+    border: none
+    height: 18px
+
+    span
+      display: block
+      top: 0
+      left: 30px
+      position: absolute
+      width: 86px
+      height: 100px
+      background: url('/logo.png') no-repeat
+  a.logo span:hover
+    background: url('/logo_hover.png') no-repeat
+
 
   .contacts
+    vertical-align: middle
     position: absolute
     right: 20px
     top: 10px
+    @media only screen and (max-width: $mws)
+      left: 145px
+      top: 45px
+    i
+      display: none
+
+      @media only screen and (max-width: $mws)
+        display: inline-block
+
     .phone
       font-size: 19px
       text-align: right
+      display: block
+      @media only screen and (max-width: $mws)
+        text-align: left 
+        display: inline-block
+        margin-right: 10px
+        font-size: 14px
+        background: #858BAB
+        padding: 4px 10px
+        +border-radius(5px 5px 0 0)
     .address
       text-align: center
       font-size: 10px
       line-height: 14px
+      display: inline-block
+      span
+        display: block
+
+        @media only screen and (max-width: $mws)
+          display: inline-block
+          margin-left: 5px
+          text-align: left 
 
 
   ul.menu_links
     position: relative
+    vertical-align: 10px
     display: inline-block
-    @media only screen and (max-width: $mws)
-      display: block
-      margin-top: 15px
-      margin-left: -5px
 
+    @media only screen and (max-width: $mws)
+      margin-left: -5px
+      position: absolute
+      
     > li
       display: inline-block
     
